@@ -17,7 +17,11 @@ class Welcome extends React.Component {
           dolor in reprehenderit.
       </p>
         <div className="ButtonLearn">
-          <button>Learn More</button>
+          <button>
+            <a href="http://www.dim-tech.fr/">
+              Learn More
+          </a>
+          </button>
         </div>
       </div>
     )

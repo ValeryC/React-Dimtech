@@ -38,3 +38,8 @@ p {
   width: 100px;
   border-radius: 20px;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
