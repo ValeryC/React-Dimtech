@@ -1,0 +1,52 @@
+.App {
+  height: 100vh;
+  display: flex;
+}
+
+.LeftSide {
+  /* calculate width with a screen of 1400 */
+  width: 56.64%;
+  background-color: white;
+  padding-left: 114.7px;
+}
+
+.App-logo {
+  padding-top: 55.61px;
+}
+
+.Welcome {
+  color: black;
+  font-size: 24px;
+  font-family: "Nunito", Regular;
+  padding-top: 196.06px;
+}
+
+p {
+  width: 100%;
+  padding-top: 23px;
+  padding-right: 283px;
+  height: 71px;
+  font-size: 10px;
+  font-weight: 200;
+  line-height: 1.9;
+}
+
+.ButtonLearn {
+  padding-top: 15px;
+}
+
+.ButtonLearn>button {
+  border-color: #FC6C5F;
+  background-color: #FC6C5F;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.Form {
+  width: 43.35%;
+  background: linear-gradient(to right, #460093, #0034BA);
+  padding: 25px 40px;
+  overflow: auto;
+}
