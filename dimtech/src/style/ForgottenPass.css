@@ -1,0 +1,28 @@
+.Forget {
+  padding-top: 289px;
+  padding-left: 81.5px;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.Instruction {
+  padding-left: 81.5px;
+  margin-top: 26px;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-family: "Nunito", light;
+  font-weight: 100;
+}
+
+.Button {
+  display: flex;
+}
+
+.Cancel {
+  color: #FFFFFF;
+  font-size: 10px;
+  font-family: "Nunito", light;
+  font-weight: 100;
+  padding-top: 24px;
+  padding-left: 20px;
+}

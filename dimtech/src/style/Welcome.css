@@ -26,20 +26,6 @@ p {
   line-height: 1.9;
 }
 
-.ButtonLearn {
+.Button {
   padding-top: 15px;
-}
-
-.ButtonLearn>button {
-  border-color: #FC6C5F;
-  background-color: #FC6C5F;
-  color: white;
-  height: 30px;
-  width: 100px;
-  border-radius: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
 }

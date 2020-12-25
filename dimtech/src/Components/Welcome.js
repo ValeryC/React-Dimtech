@@ -1,6 +1,7 @@
 import React from 'react';
 import "../style/Welcome.css"
 import Logo from './Logo'
+import Button from './Button'
 
 class Welcome extends React.Component {
 
@@ -16,12 +17,8 @@ class Welcome extends React.Component {
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
           dolor in reprehenderit.
       </p>
-        <div className="ButtonLearn">
-          <button>
-            <a href="http://www.dim-tech.fr/">
-              Learn More
-          </a>
-          </button>
+        <div className="Button">
+          <Button label="Learn More" />
         </div>
       </div>
     )
