@@ -3,57 +3,40 @@ import { Link } from 'react-router-dom'
 import Button from '../Components/Button.js'
 import "../style/ForgottenPass.css"
 
-const Welcome = ({ user }) => {
-  // This is a dumb "stateless" component
+//This file contains 3 components. Sent, Email , ForgottenPass(main) 
+
+const Sent = ({ user }) => {
   return (
-    // <div>
-    //   Welcome <strong>{user.username}</strong>
-    //   <a href="javascript:;" onClick={onSignOut}>Sign out</a>
-    // </div>
-
-
     <div className="Instruction">
-
       <div className="InlineElement">
-        <div className="sentEmail">An e-mail has been sent <strong>{user.username}</strong> to reset your password.</div>
-
+        <div className="sentEmail">An e-mail has been sent <strong>{user.mail}</strong> to reset your password.</div>
         <div class="round">
           <input type="checkbox" id="checkbox" checked />
           <label for="checkbox"></label>
         </div>
       </div>
-
       <div className="Button">
         <Link to={"/"}>
           <Button label="Home" />
         </Link>
       </div>
-
     </div>
-
-
-
   )
 }
-class LoginForm extends React.Component {
 
-  // Using a class based component here because we're accessing DOM refs
-
+class Email extends React.Component {
   handleSignIn(e) {
     e.preventDefault()
-    let username = this.refs.username.value
-
-    this.props.onSignIn(username)
+    let mail = this.refs.mail.value
+    this.props.onSignIn(mail)
   }
-
   render() {
     return (
-
       <div>
         <div className="Instruction">Please enter your e-mail to reset your password</div>
         <div className='Form-login-container'>
           <form onSubmit={this.handleSignIn.bind(this)} className="Form-login">
-            <input className='Form-input-login' type="email" name="email" placeholder="E-mail" ref="username" />
+            <input className='Form-input-login' type="email" name="email" placeholder="E-mail" ref="mail" required />
             <div className="Button">
               <Button label="Send" />
               <div className="Cancel"> <Link to={"/"}>Cancel</Link></div>
@@ -66,6 +49,7 @@ class LoginForm extends React.Component {
 
 }
 
+// This is the main component rend 2 components : Email and Sent 
 class ForgottenPass extends React.Component {
   constructor(props) {
     super(props)
@@ -75,14 +59,10 @@ class ForgottenPass extends React.Component {
     }
   }
 
-  // App "actions" (functions that modify state)
-  signIn(username) {
-    // This is where you would call Firebase, an API etc...
-    // calling setState will re-render the entire app (efficiently!)
+  valid(mail) {
     this.setState({
       user: {
-        username,
-
+        mail,
       }
     })
   }
@@ -92,8 +72,6 @@ class ForgottenPass extends React.Component {
     let email = this.refs.email.value
     this.props.onSignIn(email)
   }
-
-
   render() {
     return (
       <div className="Form">
@@ -102,9 +80,11 @@ class ForgottenPass extends React.Component {
         </div>
         {
           (this.state.user) ?
-            <Welcome user={this.state.user} />
+            //rendering component Sent first cause user === null
+            <Sent user={this.state.user} />
             :
-            <LoginForm onSignIn={this.signIn.bind(this)} />
+            //rendering component Email first cause user != null 
+            <Email onSignIn={this.valid.bind(this)} />
         }
       </div>
     )
