@@ -3,7 +3,7 @@ import Welcome from '../Components/Welcome'
 import ForgottenPass from '../Components/ForgottenPass'
 import "../style/Home.css"
 
-class Home extends React.Component {
+class ForgetPass extends React.Component {
 
   render() {
     return (<div className="Landing">
@@ -13,4 +13,4 @@ class Home extends React.Component {
     )
   }
 }
-export default Home
+export default ForgetPass
