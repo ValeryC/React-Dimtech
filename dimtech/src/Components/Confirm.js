@@ -4,8 +4,8 @@ import Button from '../Components/Button.js'
 import "../style/Confirm.css"
 
 
+class Confirm extends React.Component {
 
-class ForgettenPass extends React.Component {
 
   render() {
     return (
@@ -16,7 +16,7 @@ class ForgettenPass extends React.Component {
         <div className="Instruction">
 
           <div className="InlineElement">
-            <div className="sentEmail">An e-mail has been sent to contact@contact.com to reset your password.</div>
+            <div className="sentEmail">An e-mail has been sent to reset your password.</div>
 
             <div class="round">
               <input type="checkbox" id="checkbox" checked />
@@ -34,5 +34,6 @@ class ForgettenPass extends React.Component {
       </div>
     )
   }
+
 }
-export default ForgettenPass;
+export default Confirm;
