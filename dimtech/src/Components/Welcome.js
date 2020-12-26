@@ -2,6 +2,7 @@ import React from 'react';
 import "../style/Welcome.css"
 import Logo from './Logo'
 import Button from './Button'
+import Loremipsum from './Loremipsum'
 
 class Welcome extends React.Component {
 
@@ -12,11 +13,7 @@ class Welcome extends React.Component {
         <div className="Welcome">
           <span>Hi,<br />Welcome on Dimtech.</span>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-          dolor in reprehenderit.
-      </p>
+        <Loremipsum />
         <div className="Button">
           <Button label="Learn More" />
         </div>
