@@ -1,6 +1,6 @@
 import React from 'react';
-import Welcome from '../Components/Welcome'
-import Signin from '../Components/Signin'
+import Welcome from '../pages/container/Welcome'
+import Signin from '../pages/container/Signin'
 import "../style/Home.css"
 
 class Home extends React.Component {

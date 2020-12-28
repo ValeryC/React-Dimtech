@@ -1,8 +1,8 @@
 import React from 'react';
-import "../style/Welcome.css"
-import Logo from './Logo'
-import Button from './Button'
-import Loremipsum from './Loremipsum'
+import "../../style/Welcome.css"
+import Logo from '../../Components/Logo'
+import Button from '../../Components/Button'
+import Loremipsum from '../../Components/Loremipsum'
 
 class Welcome extends React.Component {
 
