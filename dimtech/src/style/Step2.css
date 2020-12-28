@@ -17,6 +17,7 @@
 .Form-login {
   width: 271px;
   margin-top: 2rem;
+  margin-left: 90px;
 }
 
 .Form-input-login2 {
@@ -104,44 +105,16 @@
 
 .imageUpload {
   width: 85px;
+  padding-left: 120px;
+  padding-top: 40px;
 }
 
-/* for avatar */
-
-section {
-  position: relative;
-  height: 250px;
-  width: 250px;
-}
-
-#user-avatar {
-  height: inherit;
-  width: inherit;
-  border: 3px solid lightblue;
-  border-radius: 50%;
-  transition: ease-out 200ms;
-}
-
-.Avatar {
-  display: none;
-}
-
-label span[role="button"] {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 60px;
-  width: 60px;
-  background-color: lightblue;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  transition: ease-out 200ms;
-  cursor: pointer;
-}
-
-label span:hover, label span:focus {
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  background-color: #1e94bb;
+.profile {
+  display: flex;
+  justify-content: center;
+  width: 85px;
+  color: #606166;
+  font-size: 12px;
+  font-weight: 100;
+  font-family: "Nunito", Regular;
 }

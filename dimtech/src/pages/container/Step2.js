@@ -2,6 +2,8 @@ import React from 'react';
 import '../../style/Step2.css'
 import Button from '../../Components/Button'
 import StepBar from '../../Components/StepBar'
+import Avatar from '../../Components/Avatar'
+import Upload from '../../Components/Upload'
 
 class Step2 extends React.Component {
   render() {
@@ -656,7 +658,7 @@ class Step2 extends React.Component {
                 </optgroup>
               </select>
               <input className='Form-input-number' type="tel" id="phone" name="phone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern="[0-9]{10}"
                 placeholder="Number"
                 required></input>
             </div>
@@ -665,7 +667,9 @@ class Step2 extends React.Component {
             </div>
           </form>
           <div className="imageUpload">
-
+            <Avatar />
+            <Upload />
+            <div className="profile">Profile photo</div>
           </div>
         </div>
       </div>
