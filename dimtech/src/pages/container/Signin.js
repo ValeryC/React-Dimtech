@@ -1,8 +1,8 @@
 import React from 'react';
-import "../style/Signin.css"
-import Button from '../Components/Button.js'
-import LinkSignUpConnect from './LinkSignUpConnect.js'
-import LinkToForgetPass from './LinkToForgetPass.js'
+import "../../style/Signin.css"
+import Button from '../../Components/Button'
+import LinkSignUpConnect from '../../Components/LinkSignUpConnect'
+import LinkToForgetPass from '../../Components/LinkToForgetPass'
 
 class Signin extends React.Component {
 
@@ -32,7 +32,7 @@ class Signin extends React.Component {
           </form>
         </div>
         <div className='Link-signup-connect'>
-          <LinkSignUpConnect text1='Need an account ?' text2='Sign Up' linkRoute='/SignUp' />
+          <LinkSignUpConnect text1='Need an account ?' text2='Sign Up' linkRoute='/Signup' />
         </div>
       </div>
     )

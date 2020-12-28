@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Button from '../Components/Button.js'
-import "../style/ForgottenPass.css"
+import Button from '../../Components/Button.js'
+import "../../style/ForgottenPass.css"
 
 //This file contains 3 components. Sent, Email , ForgottenPass(main) 
 
@@ -46,10 +46,8 @@ class Email extends React.Component {
       </div>
     )
   }
-
 }
-
-// This is the main component rend 2 components : Email and Sent 
+// This is the main component rendering 2 components : Email and Sent 
 class ForgottenPass extends React.Component {
   constructor(props) {
     super(props)

@@ -1,6 +1,6 @@
 import React from 'react';
-import Welcome from '../Components/Welcome'
-import ForgottenPass from '../Components/ForgottenPass'
+import Welcome from './container/Welcome'
+import ForgottenPass from '../pages/container/ForgottenPass'
 import "../style/Home.css"
 
 class ForgetPass extends React.Component {
