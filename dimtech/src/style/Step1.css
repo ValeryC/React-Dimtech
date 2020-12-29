@@ -31,27 +31,21 @@
   color: #606166;
 }
 
-::placeholder {
+.Form-input-login2::placeholder {
   color: #606166;
-}
-
-.Login-element {
-  display: flex;
-  justify-content: space-between;
-}
-
-.CheckboxLabel {
-  line-height: 25px;
-  font-family: 'nunito', light;
-  color: #606166;
-  font-size: 10px;
-  margin-top: 12px;
 }
 
 .Checkbox {
   height: 15px;
   width: 15px;
   margin-right: 8px;
+}
+
+.CheckboxLabel2 {
+  line-height: 25px;
+  font-family: 'nunito', light;
+  color: #606166;
+  font-size: 10px;
 }
 
 .ForgetPass {

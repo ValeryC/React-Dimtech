@@ -17,15 +17,17 @@ class Signin extends React.Component {
             <input className='Form-input-login' type="email" name="email" placeholder="E-mail" onChange={this.UpdateField} />
             <input className='Form-input-login' type="password" name="password" placeholder="Password" onChange={this.UpdateField} />
 
-            <div className="Login-element">
-              <label className="CheckboxLabel">
-                <input className="Checkbox" type="checkbox" name="hasAgreed" />
-                <span>Keep me logged</span>
-              </label>
+            <div className="align-element">
+              <div className="Login-element">
+                <input className="styled-checkbox" id="styled-checkbox" type="checkbox" value="login" />
+                <label className="CheckboxLabel" for="styled-checkbox"> Keep me logged</label>
+              </div>
+
               <div className="ForgetPass">
                 <LinkToForgetPass text='Forget your password?' linkRoute='/ForgetPass' />
               </div>
             </div>
+
             <div className="Button">
               <Button label="Login" />
             </div>

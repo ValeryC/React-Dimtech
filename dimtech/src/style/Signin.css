@@ -17,7 +17,6 @@
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  padding-left: 81.5px;
 }
 
 .Form-login {
@@ -34,14 +33,19 @@
   outline: none;
   font-size: 10px;
   background-color: transparent;
-  color: #FFFFFF;
+  color: white;
 }
 
-::placeholder {
+.Form-input-login::placeholder {
   color: #FFFFFF;
 }
 
 .Login-element {
+  display: flex;
+  margin-top: 15px;
+}
+
+.align-element {
   display: flex;
   justify-content: space-between;
 }
@@ -49,9 +53,8 @@
 .CheckboxLabel {
   line-height: 25px;
   font-family: 'nunito', light;
-  color: #FFFFFF;
+  color: white;
   font-size: 10px;
-  margin-top: 12px;
 }
 
 .Checkbox {
