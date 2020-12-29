@@ -15,9 +15,8 @@ class Step1 extends React.Component {
             <input className='Form-input-login2' type="password" name="ConfirmPassword" placeholder="Confirm Password" onChange={this.UpdateField} />
             <div className="Login-element">
               <input className="styled-checkbox" id="styled-checkbox" type="checkbox" value="log" />
-              <label for="styled-checkbox">Keep me logged</label>
-              <div className="ForgetPass">
-              </div>
+              <label className="CheckboxLabel2" for="styled-checkbox">Keep me logged</label>
+
             </div>
             <div className="Button">
               <Button label="Next" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import StepBar from '../../Components/StepBar'
 import CheckBoxList from '../../Components/CheckBoxList'
 import Button from "../../Components/Button"
@@ -125,18 +126,17 @@ class Step3 extends React.Component {
                   </div>
                 </div>
                 <div className="position-send">
-                  <Button label="SEND"
+          
+                  <Link to={"/SignupEnd"}><Button label="SEND"
                     className=""
                     onClick={(e) => {
                       console.log(this.state);
                       e.preventDefault();
                     }}
                   />
+                  </Link>
                 </div>
-
               </form>
-
-
             </div>
           </div>
 
