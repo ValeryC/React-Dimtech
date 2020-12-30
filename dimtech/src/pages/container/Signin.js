@@ -1,21 +1,43 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import LinkSignUpConnect from '../../Components/LinkSignUpConnect'
 import LinkToForgetPass from '../../Components/LinkToForgetPass'
 import Button from '../../Components/Button'
+import { useAuth } from '../../contexts/AuthContext'
 import "../../style/Signin.css"
+import { useHistory } from 'react-router-dom'
 
 export default function Signin() {
 
   const emailRef = useRef()
   const passwordRef = useRef()
+  const { signin } = useAuth()
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+
+    try {
+      setError('')
+      setLoading(true)
+      await signin(emailRef.current.value, passwordRef.current.value)
+      console.log('you are loged')
+      history.push('/Dashboard')
+    } catch{
+      setError('Failed to sign in')
+    }
+    setLoading(false)
+  }
 
   return (
     <div className="Form">
       <div className="Sign-in">
+        {error && <div className="error">{error}</div>}
         Sign-in
         </div>
       <div className='Form-login-container'>
-        <form className="Form-login" >
+        <form className="Form-login" onSubmit={handleSubmit} >
           <input className='Form-input-login' id="email" type="email" placeholder="E-mail" ref={emailRef} required />
           <input className='Form-input-login' id="password" type="password" placeholder="Password" ref={passwordRef} required />
 
@@ -31,7 +53,7 @@ export default function Signin() {
           </div>
 
           <div className="Button">
-            <Button label="Login" />
+            <Button disabled={loading} label="Login" type="submit" />
           </div>
         </form>
       </div>

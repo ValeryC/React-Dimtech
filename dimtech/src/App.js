@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Home from "./pages/Home"
 import ForgetPass from './pages/ForgetPass'
@@ -14,21 +14,23 @@ function App() {
 
   return (
     <div className="App" >
-      <BrowserRouter>
-        <div>
-          <Switch>
-            <AuthProvider>
+
+      <div>
+        <Router>
+          <AuthProvider>
+            <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/ForgetPass" component={ForgetPass} />
+              <Route path="/ForgetPass" component={ForgetPass} />
               <Route exact path="/Signup" component={Signup} />
-              <Route exact path="/Signup2" component={Signup2} />
-              <Route exact path="/Signup3" component={Signup3} />
-              <Route exact path="/SignupEnd" component={SignupEnd} />
+              <Route path="/Signup2" component={Signup2} />
+              <Route path="/Signup3" component={Signup3} />
+              <Route path="/SignupEnd" component={SignupEnd} />
               <Route exact path="/Dashboard" component={Dashboard} />
-            </AuthProvider>
-          </Switch>
-        </div>
-      </BrowserRouter>
+            </Switch>
+          </AuthProvider>
+        </Router>
+      </div>
+
     </div>
   );
 
