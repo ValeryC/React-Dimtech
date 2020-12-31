@@ -49,6 +49,7 @@ export default function Signin() {
 
             <div className="ForgetPass">
               <LinkToForgetPass text='Forget your password?' linkRoute='/ForgetPass' />
+
             </div>
           </div>
 
