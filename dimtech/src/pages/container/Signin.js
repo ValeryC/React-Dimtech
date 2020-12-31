@@ -3,7 +3,7 @@ import LinkSignUpConnect from '../../Components/LinkSignUpConnect'
 import LinkToForgetPass from '../../Components/LinkToForgetPass'
 import Button from '../../Components/Button'
 import { useAuth } from '../../contexts/AuthContext'
-import "../../style/Signin.css"
+import "../container/style/Signin.css"
 import { useHistory } from 'react-router-dom'
 
 export default function Signin() {

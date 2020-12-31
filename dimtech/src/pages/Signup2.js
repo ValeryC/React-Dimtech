@@ -5,7 +5,6 @@ import Logo2 from '../Components/Logo2'
 import Loremipsum from '../Components/Loremipsum'
 import Step2 from './container/Step2'
 
-
 export default function Signup2() {
 
   return (<div className="Landing">

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Button from '../../Components/Button'
 import StepBar from '../../Components/StepBar'
-import '../../style/Step1.css'
+import './style/Step1.css'
 import { useAuth } from '../../contexts/AuthContext'
 import { useHistory } from 'react-router-dom'
 

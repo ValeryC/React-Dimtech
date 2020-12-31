@@ -11,9 +11,9 @@ http://localhost:3000/ForgetPass  (need to fix component ../container/ForgottenP
 
 http://localhost:3000/Signup
 
-http://localhost:3000/Signup2 (need to get the info value of user)
+http://localhost:3000/Signup2 (need to get the info value of user) on build
 
-http://localhost:3000/Signup3 (need to get the info value of user)
+http://localhost:3000/Signup3 (need to get the info value of user)=>https://www.alltimepower.com/blog/react-hook-forms-custom-checkbox/ on build
 
 http://localhost:3000/SignupEnd
 

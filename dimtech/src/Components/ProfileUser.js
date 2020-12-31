@@ -2,11 +2,8 @@ import React, { useRef, useState } from 'react';
 import user from '../assets/user.svg'
 import "../style/ProfileUser.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
-
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from 'react-router-dom'
-
-
 
 export default function ProfileUser() {
 
@@ -28,15 +25,11 @@ export default function ProfileUser() {
       setError('Failed to log out')
     }
   }
-
   return (
-
     <div className="menu-container">
-
       <button onClick={onClick} className="menu-trigger">
         <span>  {showText && <div className="mail-user">{currentUser.email}</div>}
           {currentUser.email}</span>
-
         <img
           src={user}
           alt="User avatar"
@@ -59,9 +52,6 @@ export default function ProfileUser() {
         </ul>
       </nav>
     </div>
-
-
-
   );
 }
 

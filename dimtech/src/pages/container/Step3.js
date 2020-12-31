@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import StepBar from '../../Components/StepBar'
 import CheckBoxList from '../../Components/CheckBoxList'
 import Button from "../../Components/Button"
-import '../../style/Step3.css'
+import './style/Step3.css'
 
 
 class Step3 extends React.Component {
@@ -16,6 +16,7 @@ class Step3 extends React.Component {
     console.log(values)
     this.setState({ [name]: values })
   }
+
 
   render() {
 
@@ -43,8 +44,8 @@ class Step3 extends React.Component {
                   <div className="list-group">
                     <h4 className="Question-info">What is your level of education?</h4>
                     <CheckBoxList
-                      onChange={(Data1) => this.onChange('level', Data1)}
                       values={Data1}
+                      onChange={(Data1) => this.onChange('level', Data1)}
                     />
                   </div>
                 </div>
