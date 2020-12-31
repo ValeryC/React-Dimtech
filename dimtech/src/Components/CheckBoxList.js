@@ -7,16 +7,17 @@ class CheckBoxList extends React.Component {
     this.state = {}
     props.values.map((v, i) => {
 
+      return (this.setState[v] = false)
+    })
+  }
       return (this.state[v] = false)
     })
   }
-
   onChange(key, value) {
     this.setState({ [key]: value }, (state) => {
       return (this.props.onChange(this.state))
     })
   }
-
   render() {
     return (
       <div className="list-group-item">
