@@ -6,19 +6,17 @@ import Loremipsum from '../Components/Loremipsum'
 import Step2 from './container/Step2'
 
 
-class Signup2 extends React.Component {
-  render() {
-    return (<div className="Landing">
-      <div className="LeftSide2">
-        <Logo2 />
-        <div className="Welcome2">
-          <Title name="Why we need this information ?" />
-          <Loremipsum />
-        </div>
+export default function Signup2() {
+
+  return (<div className="Landing">
+    <div className="LeftSide2">
+      <Logo2 />
+      <div className="Welcome2">
+        <Title name="Why we need this information ?" />
+        <Loremipsum />
       </div>
-      <Step2 />
     </div>
-    )
-  }
+    <Step2 />
+  </div>
+  )
 }
-export default Signup2

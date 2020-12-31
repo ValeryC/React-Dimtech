@@ -20,3 +20,7 @@ I used react hook form library cause when you see the performance of the other o
 you will see that   
 
 Design on page Signup http://localhost:3000/Signup:  (Step1.js component) I think that the checkbox should be erase cause you create an account for the first time so you don't need to keep log. 
+
+
+temp mail you can generate quick temporary mail to test login with firebase
+https://temp-mail.org/en/

@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from '../Components/Button'
+import { useAuth } from "../contexts/AuthContext"
+import { Link, useHistory } from 'react-router-dom'
+import "../style/Dashboard.css"
 
-class Dashboard extends React.Component {
+export default function Dashboard() {
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+  const history = useHistory()
 
-  render() {
-    return (<div className="Landing">
-      this is Dashboard
-    </div>
-    )
+  async function handleLogout() {
+    setError('')
+    try {
+      await logout()
+      history.push('/')
+
+    } catch{
+      setError('Failed to log out')
+
+    }
   }
+  return (
+    <div className="Landing">
+      <div className="Container-profile">
+        {error && <div className="error">{error}</div>}
+        <strong>Email:</strong>{currentUser.email}
+        <Link to="/update-profile" className="update"><h1>Update profile</h1> </Link>
+        <Link to='/'> <Button variant="link" onClick={handleLogout} label="Log-out" /></Link>
+      </div>
+    </div>
+  )
 }
-export default Dashboard
+
