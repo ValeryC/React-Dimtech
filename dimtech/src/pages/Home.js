@@ -3,15 +3,15 @@ import Welcome from '../pages/container/Welcome'
 import Signin from '../pages/container/Signin'
 import "../style/Home.css"
 
-class Home extends React.Component {
+export default function Home() {
 
-  render() {
-    return (<div className="Landing">
+  return (
+    <div className="Landing">
       <Welcome />
       <Signin />
     </div>
-    )
-  }
+  )
+
 }
-export default Home
+
 

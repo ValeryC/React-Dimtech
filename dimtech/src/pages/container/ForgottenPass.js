@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useRef, useState } from "react";
 import { Link } from 'react-router-dom'
 import Button from '../../Components/Button.js'
 import "../../style/ForgottenPass.css"
+import { useAuth } from '../../contexts/AuthContext'
+
 
 //This file contains 3 components. Sent, Email , ForgottenPass(main) 
 
 const Sent = ({ user }) => {
+  const { currentUser } = useAuth()
   return (
     <div className="Instruction">
       <div className="InlineElement">
-        <div className="sentEmail">An e-mail has been sent <strong>{user.mail}</strong> to reset your password.</div>
+        <div className="sentEmail">An e-mail has been sent <strong>{currentUser.email}</strong> to reset your password.</div>
         <div class="round">
           <input type="checkbox" id="checkbox" checked />
           <label for="checkbox"></label>
@@ -23,30 +26,51 @@ const Sent = ({ user }) => {
     </div>
   )
 }
+function Email() {
+  const { currentUser } = useAuth()
+  const emailRef = useRef()
+  const { resetPassword } = useAuth()
+  const [error, setError] = useState('')
+  const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
 
-class Email extends React.Component {
-  handleSignIn(e) {
+
+  async function handleSubmit(e) {
     e.preventDefault()
-    let mail = this.refs.mail.value
-    this.props.onSignIn(mail)
+
+    try {
+      setMessage('')
+      setError('')
+      setLoading(true)
+      console.log(currentUser)
+      await resetPassword(emailRef.current.value)
+      setMessage('An email has been sent to ' + currentUser.email + 'to reset your password')
+    } catch{
+      setError('Failed to reset password')
+    }
+    setLoading(false)
   }
-  render() {
-    return (
-      <div>
-        <div className="Instruction">Please enter your e-mail to reset your password</div>
-        <div className='Form-login-container'>
-          <form onSubmit={this.handleSignIn.bind(this)} className="Form-login">
-            <input className='Form-input-login' type="email" name="email" placeholder="E-mail" ref="mail" required />
-            <div className="Button">
-              <Button label="Send" />
-              <div className="Cancel"> <Link to={"/"}>Cancel</Link></div>
-            </div>
-          </form>
-        </div>
+
+  return (
+
+    <div>
+      <div className="Instruction">Please enter your e-mail to reset your password</div>
+      <div className='Form-login-container'>
+        {error && <div className="error">{error}</div>}
+        {message && <div className="error">{message}</div>}
+
+        <form onSubmit={handleSubmit} className="Form-login">
+          <input className='Form-input-login' type="email" placeholder="E-mail" ref={emailRef} required />
+          <div className="Button">
+            <Button disabled={loading} label="Send" type="submit" />
+            <div className="Cancel"> <Link to={"/"}>Cancel</Link></div>
+          </div>
+        </form>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
 // This is the main component rendering 2 components : Email and Sent 
 class ForgottenPass extends React.Component {
   constructor(props) {
@@ -57,10 +81,10 @@ class ForgottenPass extends React.Component {
     }
   }
 
-  valid(mail) {
+  valid(email) {
     this.setState({
       user: {
-        mail,
+        email,
       }
     })
   }

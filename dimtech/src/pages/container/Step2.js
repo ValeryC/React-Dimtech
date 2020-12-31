@@ -4,6 +4,7 @@ import Button from '../../Components/Button'
 import StepBar from '../../Components/StepBar'
 import Avatar from '../../Components/Avatar'
 import Upload from '../../Components/Upload'
+import { Link } from 'react-router-dom'
 
 class Step2 extends React.Component {
   render() {
@@ -663,7 +664,8 @@ class Step2 extends React.Component {
                 required></input>
             </div>
             <div className="Button">
-              <Button label="Next" />
+              <Link to='/Signup3'>
+                <Button label="Next" /></Link>
             </div>
           </form>
           <div className="imageUpload">
