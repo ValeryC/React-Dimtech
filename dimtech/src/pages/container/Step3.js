@@ -126,7 +126,6 @@ class Step3 extends React.Component {
                   </div>
                 </div>
                 <div className="position-send">
-
                   <Link to={"/SignupEnd"}><Button label="SEND"
                     className=""
                     onClick={(e) => {
