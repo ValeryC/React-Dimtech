@@ -27,5 +27,19 @@ you will see that react hook is more quick than the other (Reduce Rendering, Fas
 
 Design on page Signup http://localhost:3000/Signup:  (Step1.js component) I think that the checkbox should be erase cause you create an account for the first time so you don't need to keep log. 
 
-temp mail you can generate quick temporary mail to test login with firebase
-https://temp-mail.org/en/
+You can generate quick temporary mail to test login with firebase
+ =>  https://temp-mail.org/en/
+
+I used :
+https://negomi.github.io/react-burger-menu/
+for the sidebarburgermenu
+
+
+
+
+Just want to say that it's been a while that i used react. It was really really long time ago, i familiar with Vuejs. 
+So i had to learn a lot about hooks state. Cause at the beginning i wrote all my component with class, and i realize how simple it is to use hook function. This work give me a lot of tips for the future. So thank you, i hope you will enjoy my work.
+So if you need anything, let me know and i will try my best to answer you.
+
+Cheers!!
+

@@ -5,10 +5,8 @@ import './style/Sidebar.css'
 import Logo2 from '../Logo2';
 import { SidebarData } from './SidebarData'
 
-
 export default function Sidebar() {
   const [open, close] = useState(false)
-
 
   return (
 
@@ -16,9 +14,7 @@ export default function Sidebar() {
       <Menu isOpen={open} onStateChange={s => close(s.close)}>
         <div className="container-logo" onClick={close}>
           <Logo2 onClick={close} />
-          <img src="../../assets/user.svg" height='12px' width='12px' />
         </div>
-
         {SidebarData.map((item, index) => {
           return (
             <li key={index} className={item.cName}>
