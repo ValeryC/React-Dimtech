@@ -11,7 +11,7 @@ export default function ProfileUser() {
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setIsActive(!isActive);
 
-  const [showText, setShowText] = useState(false);
+  const [showText] = useState(false);
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
   const history = useHistory()

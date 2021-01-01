@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 6px;
+  padding: 30px 20px;
   border: none;
   vertical-align: middle;
   transition: box-shadow 0.4s ease;
@@ -45,7 +45,7 @@
   position: absolute;
   top: 35px;
   right: 0;
-  width: 100px;
+  width: 200px;
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
   /* opacity: 0; */
   visibility: hidden;
