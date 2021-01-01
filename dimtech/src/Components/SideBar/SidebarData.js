@@ -96,8 +96,8 @@ export const SidebarData = [
     cName: 'bm-item'
   },
   {
-    title: 'Contact Select',
-    path: '/ContactSelect',
+    title: 'Contact',
+    path: '/Contact',
     icon: ContactWhite(),
     iconSelect: ContactSelect(),
     cName: 'bm-item'

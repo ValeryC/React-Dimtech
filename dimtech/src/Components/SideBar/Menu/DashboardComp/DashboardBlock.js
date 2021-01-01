@@ -1,6 +1,6 @@
 import React from 'react';
-import ProfileUser from '../../../Components/ProfileUser'
-import '../../container/DashboardComp/style/DashboardBlock.css'
+import ProfileUser from '../../../../Components/ProfileUser'
+import './style/DashboardBlock.css'
 export default function DashboardBlock() {
 
   return (
