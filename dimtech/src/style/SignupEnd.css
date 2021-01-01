@@ -1,0 +1,21 @@
+.space {
+  padding-top: 200px;
+}
+
+.Container-text {
+  color: black;
+  font-size: 24px;
+  font-family: "Nunito", Regular;
+  padding-bottom: 60px;
+}
+
+.rightpart {
+  width: 43.35%;
+  background: linear-gradient(to right, #460093, #0034BA);
+  overflow: auto;
+}
+
+.buttongo {
+  padding-top: 20px;
+  padding-left: 11%;
+}
