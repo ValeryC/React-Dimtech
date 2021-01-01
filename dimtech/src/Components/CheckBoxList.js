@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/Step3.css'
+import '../pages/container/style/Step3.css'
 
 class CheckBoxList extends React.Component {
   constructor(props) {

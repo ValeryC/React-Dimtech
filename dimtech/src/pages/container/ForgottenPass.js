@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link } from 'react-router-dom'
 import Button from '../../Components/Button.js'
-import "../../style/ForgottenPass.css"
+import "../container/style/ForgottenPass.css"
 import { useAuth } from '../../contexts/AuthContext'
 
 
