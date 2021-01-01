@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { slide as Menu } from "react-burger-menu";
+import { push as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import './style/Sidebar.css'
 import Logo2 from '../Logo2';
