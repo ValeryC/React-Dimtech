@@ -1,0 +1,95 @@
+.container-logo {
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 90px;
+  background: transparent !important;
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+/* sidebar */
+
+.title-menu {
+  margin-left: 16px;
+}
+
+li .bm-item {
+  outline: -webkit-focus-ring-color auto 0px;
+  display: flex !important;
+  text-decoration: none;
+  color: #0434BA!important;
+  transition: color 0.2s;
+  height: 56px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+.bm-item:hover {
+  color: #0434BA!important;
+  background-color: white
+}
+
+.bm-item a {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  width: 300px;
+  color: white;
+  padding-left: 70px;
+}
+
+.bm-item a:hover {
+  color: #0434BA!important;
+  background-color: white
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  display: none
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: linear-gradient(to right, #460093, #0034BA);
+  overflow: auto;
+  font-size: 16px;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* .bm-item-list {
+  color: #b8b7ad;
+} */
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0);
+}
+
+li .icon-color:hover path {
+  fill: #0434ba
+}
+
+li:active path {
+  fill: #0434ba;
+}
+
+a:hover svg path {
+  fill: #0434ba;
+}

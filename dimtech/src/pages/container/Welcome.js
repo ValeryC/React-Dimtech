@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../style/Welcome.css"
+import "./style/Welcome.css"
 import Logo from '../../Components/Logo'
 import Button from '../../Components/Button'
 import Loremipsum from '../../Components/Loremipsum'
