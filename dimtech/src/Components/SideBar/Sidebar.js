@@ -10,8 +10,8 @@ export default function Sidebar() {
 
   return (
 
-    <div className="Container-sidebar">
-      <Menu isOpen={open} onStateChange={s => close(s.close)}>
+    <div className="Container-sidebar" isOpen={open}>
+      <Menu isOpen={close} onStateChange={s => close(s.close)}>
         <div className="container-logo" onClick={close}>
           <Logo2 onClick={close} />
         </div>
