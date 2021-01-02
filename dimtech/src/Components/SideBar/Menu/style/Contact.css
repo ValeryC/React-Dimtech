@@ -59,9 +59,12 @@
   background: #F4F4F4;
   border: none;
   padding: 20px;
-  height: 200px;
   border-radius: 5px;
+  height: 200px;
+  min-width: 350px;
   max-width: 350px;
+  min-height: 100px;
+  max-height: 250px;
 }
 
 .button-send {
