@@ -17,6 +17,10 @@ http://localhost:3000/Signup3 (need to get the info value of user)=>https://www.
 
 http://localhost:3000/SignupEnd
 
+http://localhost:3000/Contact (need to create a modal for message but instead put message in alert)
+
+http://localhost:3000/Dashboard 
+
 I create contexts folder to access current user anywhere in our application
 
 For firebase api key if you had any trouble to login ask me cause i create an .env.local. (.gitignore)
@@ -34,8 +38,10 @@ I used :
 https://negomi.github.io/react-burger-menu/
 for the sidebarburgermenu
 
-
-
+http://localhost:3000/Contact 
+Sorry i just realize that i have to use redux or mobx...
+So i use my cloud firestore, easy to launch and to manipulate for the backend. (simple and free)
+Message error has been treated.
 
 Just want to say that it's been a while that i used react. It was really really long time ago, i am more familiar with Vuejs. 
 So i had to learn a lot about hooks state. Cause at the beginning i wrote all my component with class, and i realize how simple it is to use hook function. This work give me a lot of tips for the future. So thank you, i hope you will enjoy my work.
