@@ -1,0 +1,38 @@
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results .result {
+  width: 33.333%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.results .result img {
+  display: block;
+  width: 100%;
+}
+
+.results .result img {
+  display: block;
+  width: 100%;
+}
+
+.results .result h3 {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #445565;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
+}
+
+.results .result:hover h3 {
+  background: #8B8B8B;
+  color: #223343;
+}
