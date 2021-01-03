@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
-import DashboardBlock from '../Menu/DashboardComp/DashboardBlock'
-import Search from '../Menu/DashboardComp/Search'
+import DashboardBlock from './DashboardComp/DashboardBlock'
+import Search from './DashboardComp/Search'
 import Results from './DashboardComp/Results'
 import Details from './DashboardComp/Details'
 import "./style/Dashboard.css"
 import axios from 'axios'
-
 
 export default function Dashboard() {
   const [state, setState] = useState({
@@ -19,7 +18,7 @@ export default function Dashboard() {
   const search = (e) => {
     if (e.key === "Enter") {
       axios(apiurl + "&s=" + state.s).then(({ data }) => {
-
+        console.log(data)
         let results = data.Search
         setState(prevState => {
           return { ...prevState, results: results }
@@ -30,10 +29,27 @@ export default function Dashboard() {
 
   const handleInput = (e) => {
     let s = e.target.value
+
     setState(prevState => {
       return { ...prevState, s: s }
     })
     console.log(state.s)
+  }
+
+  const openDetails = id => {
+    axios(apiurl + "&i=" + id).then(({ data }) => {
+      let result = data;
+      console.log(result)
+      setState(prevState => {
+        return { ...prevState, selected: result }
+      })
+    })
+  }
+
+  const closeDetails = () => {
+    setState(prevState => {
+      return { ...prevState, selected: {} }
+    });
   }
 
   return (
@@ -48,11 +64,14 @@ export default function Dashboard() {
             </header>
             <main>
               <Search handleInput={handleInput} search={search} />
-              <Results results={state.results} />
+              <Results results={state.results} openDetails={openDetails} />
+              {(typeof state.selected.Title != "undefined") ? <Details selected={state.selected} closeDetails={closeDetails} /> : false}
+
             </main>
           </div>
           <div className="Movie-info">
-            <Details />
+
+
           </div>
         </div>
       </div>

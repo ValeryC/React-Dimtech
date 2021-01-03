@@ -40,6 +40,16 @@
   height: auto;
   width: 610px;
   background: white;
+  overflow-y: scroll;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.Movie-info::-webkit-scrollbar {
+  display: none;
 }
 
 .title-main {
@@ -48,6 +58,4 @@
 
 main {
   width: 100%;
-  max-width: 960;
-  margin: 0 auto;
 }
