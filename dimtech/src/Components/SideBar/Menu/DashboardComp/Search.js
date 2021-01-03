@@ -1,13 +1,12 @@
 import React from 'react';
 import './style/Search.css'
 
-const Search = ({ handleInput, search }) => {
-
+function Search({ handleInput, search }) {
   return (
     <section className="searchbox-wrap">
       <input
         type="text"
-        placeholder="Search your movie..."
+        placeholder="Search for a movie..."
         className="searchbox"
         onChange={handleInput}
         onKeyPress={search}
@@ -16,4 +15,5 @@ const Search = ({ handleInput, search }) => {
   )
 }
 
-export default Search 
+export default Search
+

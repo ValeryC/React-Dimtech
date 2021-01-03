@@ -3,7 +3,7 @@ import Sidebar from '../Sidebar';
 import DashboardBlock from './DashboardComp/DashboardBlock'
 import Search from './DashboardComp/Search'
 import Results from './DashboardComp/Results'
-import Details from './DashboardComp/Details'
+import Popup from './DashboardComp/Popup'
 import "./style/Dashboard.css"
 import axios from 'axios'
 
@@ -12,45 +12,46 @@ export default function Dashboard() {
     s: "",
     results: [],
     selected: {}
-  })
-  const apiurl = 'http://www.omdbapi.com/?i=tt3896198&apikey=3547e686'
-
+  });
+  const apiurl = "http://www.omdbapi.com/?apikey=dfe6d885";
   const search = (e) => {
     if (e.key === "Enter") {
       axios(apiurl + "&s=" + state.s).then(({ data }) => {
-        console.log(data)
-        let results = data.Search
+        let results = data.Search;
+
         setState(prevState => {
           return { ...prevState, results: results }
         })
-      })
+      });
     }
   }
 
   const handleInput = (e) => {
-    let s = e.target.value
+    let s = e.target.value;
 
     setState(prevState => {
       return { ...prevState, s: s }
-    })
-    console.log(state.s)
+    });
   }
 
-  const openDetails = id => {
+  const openPopup = id => {
     axios(apiurl + "&i=" + id).then(({ data }) => {
       let result = data;
-      console.log(result)
+
+      console.log(result);
+
       setState(prevState => {
         return { ...prevState, selected: result }
-      })
-    })
+      });
+    });
   }
 
-  const closeDetails = () => {
+  const closePopup = () => {
     setState(prevState => {
       return { ...prevState, selected: {} }
     });
   }
+
 
   return (
     <div className="Main-container">
@@ -64,13 +65,12 @@ export default function Dashboard() {
             </header>
             <main>
               <Search handleInput={handleInput} search={search} />
-              <Results results={state.results} openDetails={openDetails} />
-              {(typeof state.selected.Title != "undefined") ? <Details selected={state.selected} closeDetails={closeDetails} /> : false}
-
+              <Results results={state.results} openPopup={openPopup} />
             </main>
           </div>
           <div className="Movie-info">
 
+            {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
 
           </div>
         </div>

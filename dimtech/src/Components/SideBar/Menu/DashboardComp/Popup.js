@@ -1,7 +1,7 @@
 import React from 'react'
-import './style/Details.css'
+import "./style/Popup.css"
 
-function Details({ selected, closeDetails }) {
+function Popup({ selected, closePopup }) {
   return (
     <section className="popup">
       <div className="content">
@@ -11,10 +11,11 @@ function Details({ selected, closeDetails }) {
           <img src={selected.Poster} />
           <p>{selected.Plot}</p>
         </div>
-        <button className="close" onClick={closeDetails}>Close</button>
+        <button className="close" onClick={closePopup}>Close</button>
       </div>
     </section>
   )
 }
 
-export default Details
+export default Popup
+

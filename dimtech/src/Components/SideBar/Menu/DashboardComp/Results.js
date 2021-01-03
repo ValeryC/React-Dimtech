@@ -2,14 +2,14 @@ import React from 'react'
 import Result from './Result'
 import './style/Results.css'
 
-function Results({ results, openDetails }) {
+function Results({ results, openPopup }) {
   return (
     <section className="results">
       {results.map(result => (
-        <Result key={result.imdbID} result={result} openDetails={openDetails} />
-
+        <Result key={result.imdbID} result={result} openPopup={openPopup} />
       ))}
     </section>
   )
 }
+
 export default Results
