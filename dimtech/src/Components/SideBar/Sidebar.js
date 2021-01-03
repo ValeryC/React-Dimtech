@@ -29,7 +29,6 @@ export default function Sidebar() {
       </Menu>
     </div>
   );
-
 }
 
 

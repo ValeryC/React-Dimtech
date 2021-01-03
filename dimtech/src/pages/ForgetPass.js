@@ -4,6 +4,7 @@ import ForgottenPass from '../pages/container/ForgottenPass'
 import "../style/Home.css"
 
 export default function ForgetPass() {
+
   return (
     <div className="Landing">
       <Welcome />

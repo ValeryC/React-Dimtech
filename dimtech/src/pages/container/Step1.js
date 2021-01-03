@@ -5,7 +5,6 @@ import './style/Step1.css'
 import { useAuth } from '../../contexts/AuthContext'
 import { useHistory } from 'react-router-dom'
 
-
 export default function Step1() {
 
   const emailRef = useRef()
@@ -54,7 +53,6 @@ export default function Step1() {
           </div>
         </form>
       </div>
-
     </div>
   )
 }

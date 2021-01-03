@@ -18,7 +18,6 @@ export default function Dashboard() {
     if (e.key === "Enter") {
       axios(apiurl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
-
         setState(prevState => {
           return { ...prevState, results: results }
         })
@@ -52,7 +51,6 @@ export default function Dashboard() {
     });
   }
 
-
   return (
     <div className="Main-container">
       <Sidebar />
@@ -69,9 +67,7 @@ export default function Dashboard() {
             </main>
           </div>
           <div className="Movie-info">
-
             {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
-
           </div>
         </div>
       </div>

@@ -53,8 +53,11 @@
 }
 
 .popup {
-  background-color: #445565;
+  background-color: white;
   overflow-y: scroll;
+  height: max-content;
+  width: 620px;
+  color: black
 }
 
 .popup .content {
@@ -63,12 +66,13 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 25px;
-  color: #FFF;
+  color: black
 }
 
 .popup .content h2 {
   font-size: 28px;
   font-weight: 600;
+  padding-bottom: 20px;
 }
 
 .popup .content h2 span {
@@ -78,23 +82,22 @@
 
 .popup .content .rating {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .popup .content .plot {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0px -15px 30px;
 }
 
 .popup .content .plot img {
   flex: 1 1 50%;
   max-width: 300px;
-  padding: 0px 15px;
+  padding-bottom: 30px;
 }
 
-.popup .content .plot p {
-  flex: 1 1 50%;
-  padding: 15px;
+.resume-text {
+  font-size: 20px;
 }
 
 .popup .content .close {

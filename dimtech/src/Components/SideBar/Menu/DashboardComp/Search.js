@@ -6,7 +6,7 @@ function Search({ handleInput, search }) {
     <section className="searchbox-wrap">
       <input
         type="text"
-        placeholder="Search for a movie..."
+        placeholder="ex : Star Wars, Ready player one , Lord of the rings ˆˆ..."
         className="searchbox"
         onChange={handleInput}
         onKeyPress={search}
