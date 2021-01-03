@@ -17,7 +17,6 @@ class Step3 extends React.Component {
     this.setState({ [name]: values })
   }
 
-
   render() {
 
     const Data1 = ["Secondary School", "High School", "Undergraduate School", "Postgraduate School", "Doctorate"];
@@ -36,9 +35,7 @@ class Step3 extends React.Component {
           <span className="title-check">Help us to know more about you</span>
           <div className="Container-subject">
             <div className="Question-check">
-
               <form className="form">
-
                 <div className="Group">
                   <div className="Subject">Education</div>
                   <div className="list-group">

@@ -10,13 +10,12 @@
 }
 
 .menu-trigger {
-  background: #ffffff;
+  background: #F4F4F4;
   border-radius: 90px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
   border: none;
   vertical-align: middle;
   transition: box-shadow 0.4s ease;

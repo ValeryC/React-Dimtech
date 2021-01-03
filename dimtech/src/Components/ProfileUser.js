@@ -10,7 +10,6 @@ export default function ProfileUser() {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setIsActive(!isActive);
-
   const [showText] = useState(false);
   const [error, setError] = useState("")
   const { currentUser, logout } = useAuth()
@@ -30,25 +29,17 @@ export default function ProfileUser() {
       <button onClick={onClick} className="menu-trigger">
         <span>  {showText && <div className="mail-user">{currentUser.email}</div>}
           {currentUser.email}</span>
-        <img
-          src={user}
-          alt="User avatar"
-          className="App-avatar" height='30px' width='30px'
-        />
+        <img src={user} alt="User avatar" className="App-avatar" height='30px' width='30px' />
         {error && <div className="error">{error}</div>}
       </button>
-      <nav
-        ref={dropdownRef}
-        className={`menu ${isActive ? "active" : "inactive"}`}
-      >
+      <nav ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
         <ul>
           <li>
-            <Link to="/update-profile" className="update"><div>Update profile</div> </Link>
+            <Link to="/Settings" className="update"><div>Update profile</div> </Link>
           </li>
           <li>
             <Link to='/' variant="link" onClick={handleLogout}><div>Log-out</div></Link>
           </li>
-
         </ul>
       </nav>
     </div>

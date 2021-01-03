@@ -5,7 +5,6 @@ import './style/Step1.css'
 import { useAuth } from '../../contexts/AuthContext'
 import { useHistory } from 'react-router-dom'
 
-
 export default function Step1() {
 
   const emailRef = useRef()
@@ -15,17 +14,15 @@ export default function Step1() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const history = useHistory()
+
   async function handleSubmit(e) {
     e.preventDefault()
-
-
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError('Passwords do not match')
     }
     else if (passwordRef.current.value.length < 6) {
       return setError('At least 6 characters')
     }
-
     try {
       setError('')
       setLoading(true)
@@ -37,13 +34,10 @@ export default function Step1() {
     setLoading(false)
   }
 
-
   return (
     <div className="Form2">
       <StepBar />
-
       <div className='Form-login-container2'>
-
         {error && <div className="error">{error}</div>}
         <form className="Form-login1" onSubmit={handleSubmit}>
           <input className='Form-input-login2' id="email" type="email" placeholder="E-mail" ref={emailRef} required />
@@ -59,7 +53,6 @@ export default function Step1() {
           </div>
         </form>
       </div>
-
     </div>
   )
 }
