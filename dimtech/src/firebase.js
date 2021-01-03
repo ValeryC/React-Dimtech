@@ -11,6 +11,7 @@ const app = firebase.initializeApp({
   appId: process.env.REACT_APP_FIREBASE_APP_ID
 })
 
+//if you download the project put this key app
 
 // const app = firebase.initializeApp({
 //   apiKey: "AIzaSyDzBuv6zj3rqPKGxcP45iqAjZBSEv4rEM0",

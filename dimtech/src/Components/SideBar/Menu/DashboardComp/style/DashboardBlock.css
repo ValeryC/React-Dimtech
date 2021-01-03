@@ -1,3 +1,5 @@
 .Container-dash {
-  width: 100%
+  width: 240px;
+  height: 32px;
+  display: initial;
 }

@@ -35,24 +35,20 @@ export default function Signin() {
       <div className="Sign-in">
         {error && <div className="error">{error}</div>}
         Sign-in
-        </div>
+      </div>
       <div className='Form-login-container'>
         <form className="Form-login" onSubmit={handleSubmit} >
           <input className='Form-input-login' id="email" type="email" placeholder="E-mail" ref={emailRef} required />
           <input className='Form-input-login' id="password" type="password" placeholder="Password" ref={passwordRef} required />
-
           <div className="align-element">
             <div className="Login-element">
               <input className="styled-checkbox" id="styled-checkbox" type="checkbox" value="login" />
               <label className="CheckboxLabel" for="styled-checkbox"> Keep me logged</label>
             </div>
-
             <div className="ForgetPass">
               <LinkToForgetPass text='Forget your password?' linkRoute='/ForgetPass' />
-
             </div>
           </div>
-
           <div className="Button">
             <Button disabled={loading} label="Login" type="submit" />
           </div>

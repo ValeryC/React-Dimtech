@@ -4,7 +4,6 @@ import Sidebar from '../Sidebar'
 import './style/Contact.css'
 import Button from '../../../Components/Button'
 
-
 const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -13,7 +12,7 @@ const Contact = () => {
   const [loader, setLoader] = useState(false)
 
   function validEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     return re.test(email)
   }
 
@@ -45,14 +44,12 @@ const Contact = () => {
                   setEmail('')
                   setObject('')
                   setMessage('')
-
                 })
                 .catch((error) => {
                   alert(error.message)
                   setLoader(false)
                 })
     }
-
   }
 
   return (

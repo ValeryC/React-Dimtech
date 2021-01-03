@@ -12,7 +12,7 @@ import { AuthProvider } from '../src/contexts/AuthContext'
 import PrivateRoute from './Components/PrivateRoute'
 import Portfolio from './Components/SideBar/Menu/Portfolio';
 import OtherServices from './Components/SideBar/Menu/OtherServices'
-import Setting from './Components/SideBar/Menu/Setting'
+import Settings from './Components/SideBar/Menu/Settings'
 import Contact from './Components/SideBar/Menu/Contact'
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
               <PrivateRoute exact path="/Dashboard" component={Dashboard} />
               <PrivateRoute exact path="/Portfolio" component={Portfolio} />
               <PrivateRoute exact path="/OtherServices" component={OtherServices} />
-              <PrivateRoute exact path="/Settings" component={Setting} />
+              <PrivateRoute exact path="/Settings" component={Settings} />
               <PrivateRoute exact path='/Contact' component={Contact} />
             </Switch>
           </AuthProvider>
