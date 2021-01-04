@@ -14,10 +14,15 @@
   width: 100%;
 }
 
-.Form-login {
-  width: 271px;
+.Form-login2 {
+  display: flex;
   margin-top: 2rem;
   margin-left: 90px;
+  width: 500px;
+}
+
+.form-login-info {
+  width: 310px;
 }
 
 .Form-input-login2 {
@@ -102,6 +107,8 @@
   background-color: transparent;
   color: #CECECE;
 }
+
+.container-photo {}
 
 .imageUpload {
   width: 85px;
