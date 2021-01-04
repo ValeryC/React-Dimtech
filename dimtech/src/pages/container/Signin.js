@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import LinkSignUpConnect from '../../Components/LinkSignUpConnect'
 import LinkToForgetPass from '../../Components/LinkToForgetPass'
 import Button from '../../Components/Button'
@@ -8,12 +8,21 @@ import { useHistory } from 'react-router-dom'
 
 export default function Signin() {
 
+  const [emailInput, setEmailInput] = useState('')
   const emailRef = useRef()
   const passwordRef = useRef()
   const { signin } = useAuth()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const history = useHistory()
+
+  useEffect(() => {
+    document.title = 'Welcome ' + emailInput
+  })
+
+  function handleMailChange(e) {
+    setEmailInput(e.target.value)
+  }
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -38,8 +47,22 @@ export default function Signin() {
       </div>
       <div className='Form-login-container'>
         <form className="Form-login" onSubmit={handleSubmit} >
-          <input className='Form-input-login' id="email" type="email" placeholder="E-mail" ref={emailRef} required />
-          <input className='Form-input-login' id="password" type="password" placeholder="Password" ref={passwordRef} required />
+
+          <input className='Form-input-login'
+            id="email" type="email"
+            placeholder="E-mail"
+            ref={emailRef}
+            value={emailInput}
+            onChange={handleMailChange}
+            required />
+
+          <input className='Form-input-login'
+            id="password"
+            type="password"
+            placeholder="Password"
+            ref={passwordRef}
+            required />
+
           <div className="align-element">
             <div className="Login-element">
               <input className="styled-checkbox" id="styled-checkbox" type="checkbox" value="login" />
