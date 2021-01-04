@@ -18,23 +18,11 @@
   border-radius: 16px;
 }
 
-.Profile-info {
+.Container-Profile-info {
   border-radius: 20px;
   height: auto;
   width: 70%;
   background: white;
-  overflow-y: scroll;
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-
-.Profile-info::-webkit-scrollbar {
-  display: none;
 }
 
 .offers {
@@ -43,10 +31,4 @@
   height: auto;
   width: 30%;
   background: white;
-  overflow-y: scroll;
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
 }

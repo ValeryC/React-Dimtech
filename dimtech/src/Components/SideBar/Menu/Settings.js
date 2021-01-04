@@ -9,9 +9,20 @@ export default function Settings() {
       <Sidebar />
       <div className="Container-settings">
         <div className="Container-setelement">
-          <div className="Profile-info">
+
+          <div className="Container-Profile-info">
+
+
+            <div className="User-info">
+
+            </div>
+
+            <div className="Avatar">
+
+            </div>
 
           </div>
+
           <div className="offers">
           </div>
         </div>
