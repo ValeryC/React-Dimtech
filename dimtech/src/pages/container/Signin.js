@@ -16,18 +16,10 @@ export default function Signin() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
-  //that replace componentDidMount() and componentDidUpdate() no need this.state ... 
   useEffect(() => {
     document.title = 'Welcome ' + emailInput
   })
 
-  // handleMailChange(e){
-  //   this.state({
-  //     emailInput:e.target.value
-  //   })
-  // }
-
-  //before you didnt need to put function to create you method
   function handleMailChange(e) {
     setEmailInput(e.target.value)
   }
