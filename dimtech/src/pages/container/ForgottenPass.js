@@ -46,7 +46,7 @@ function Email() {
       await resetPassword(emailRef.current.value)
       setMessage('An email has been sent to ' + currentUser.email + ' to reset your password')
     } catch{
-      setError('Failed to reset password, email not found')
+      setError('Failed to reset password, email not found, or check your mail again')
     }
     setLoading(false)
   }

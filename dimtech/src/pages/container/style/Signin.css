@@ -17,6 +17,7 @@
   align-content: center;
   justify-content: center;
   flex-direction: column;
+  padding-left: 82px;
 }
 
 .Form-login {
