@@ -59,18 +59,18 @@ export default function Uploader() {
   return (
     <div>
       <div>
-        <input type="file" onChange={handChange} ref={register} />{" "}
-        <button onClick={handleUpdate}> Upload</button>
+        {url ? (
+          <img src={url} alt="logo" height="100px" width="100px" />
+        ) : (
+            <Avatar />
+          )}
+        <input type="file" onChange={handChange} onClick={handleUpdate} ref={register} />{" "}
+
       </div>
       <div style={{ height: "100px" }}>
         {progress > 0 ? <progress value={progress} max="100" /> : ""}
         <p style={{ color: "red" }}>{error}</p>
       </div>
-      {url ? (
-        <img src={url} alt="logo" />
-      ) : (
-          <Avatar />
-        )}
     </div>
   );
 }

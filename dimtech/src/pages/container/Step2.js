@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import './style/Step2.css'
 import Button from '../../Components/Button'
 import StepBar from '../../Components/StepBar'
+// import Avatar from '../../Components/Avatar'
 import Upload from '../../Components/Upload'
 import { Step2Month, Step2Day, Step2Year, Step2Countries, Step2Ind } from './data/Step2data'
 // import { Link } from 'react-router-dom'
@@ -88,7 +89,7 @@ export default function Step2() {
             <div className="imageUpload" name="photo" ref={register} >
 
               <Upload />
-              <div className="profile">Profile photo</div>
+              {/* <div className="profile">Profile photo</div> */}
             </div>
           </div>
 
