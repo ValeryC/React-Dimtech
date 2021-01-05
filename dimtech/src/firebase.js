@@ -1,6 +1,7 @@
 import firebase from 'firebase/app'
 require('firebase/firestore')
 require('firebase/auth')
+require('firebase/storage')
 
 // if you create .env.local
 //REACT_APP_FIREBASE_API_KEY=AIzaSyDzBuv6zj3rqPKGxcP45iqAjZBSEv4rEM0
@@ -31,6 +32,10 @@ const app = firebase.initializeApp({
   appId: "1:363074100318:web:88a2204b22157653cca8cf"
 })
 
+export const storage = firebase.storage()
+
 export const db = firebase.firestore();
-export default app
+
+export { app, storage as default }
 export const auth = app.auth()
+
