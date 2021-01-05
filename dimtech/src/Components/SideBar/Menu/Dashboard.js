@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from '../Sidebar';
 import DashboardBlock from './DashboardComp/DashboardBlock'
 import Search from './DashboardComp/Search'
@@ -8,6 +8,11 @@ import "./style/Dashboard.css"
 import axios from 'axios'
 
 export default function Dashboard() {
+
+  useEffect(() => {
+    document.title = 'Dashboard'
+  })
+
   const [state, setState] = useState({
     s: "",
     results: [],
