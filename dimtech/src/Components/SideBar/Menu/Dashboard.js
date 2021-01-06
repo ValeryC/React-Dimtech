@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import Sidebar from '../Sidebar';
 import DashboardBlock from './DashboardComp/DashboardBlock'
 import Search from './DashboardComp/Search'
@@ -6,8 +7,16 @@ import Results from './DashboardComp/Results'
 import Popup from './DashboardComp/Popup'
 import "./style/Dashboard.css"
 import axios from 'axios'
+import ArrowRight from '../../ArrowRight'
+import ArrowLeft from '../../ArrowLeft'
+
 
 export default function Dashboard() {
+
+  useEffect(() => {
+    document.title = 'Dashboard'
+  })
+
   const [state, setState] = useState({
     s: "",
     results: [],
@@ -68,6 +77,14 @@ export default function Dashboard() {
           </div>
           <div className="Movie-info">
             {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
+          </div>
+        </div>
+        <div className="arrow-block">
+          <div className="arrowLeft">
+            <Link to='/Dashboard6' ><ArrowLeft /></Link>
+          </div>
+          <div className="arrowRight">
+            <Link to='/Dashboard2' ><ArrowRight /></Link>
           </div>
         </div>
       </div>

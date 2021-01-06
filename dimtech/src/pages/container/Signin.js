@@ -16,6 +16,11 @@ export default function Signin() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
+  function validEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(email)
+  }
+
   useEffect(() => {
     document.title = 'Welcome ' + emailInput
   })
@@ -27,6 +32,9 @@ export default function Signin() {
   async function handleSubmit(e) {
     e.preventDefault()
 
+    if (!validEmail(emailInput)) {
+      return setError('Message is not sent! The email address is badly formatted.')
+    }
     try {
       setError('')
       setLoading(true)
@@ -34,7 +42,7 @@ export default function Signin() {
       console.log('you are loged')
       history.push('/Dashboard')
     } catch{
-      setError('Failed to sign in')
+      setError('Failed to sign in, sign up ? ')
     }
     setLoading(false)
   }
@@ -42,11 +50,11 @@ export default function Signin() {
   return (
     <div className="Form">
       <div className="Sign-in">
-        {error && <div className="error">{error}</div>}
         Sign-in
       </div>
       <div className='Form-login-container'>
         <form className="Form-login" onSubmit={handleSubmit} >
+          {error && <div className="error">{error}</div>}
 
           <input className='Form-input-login'
             id="email" type="email"

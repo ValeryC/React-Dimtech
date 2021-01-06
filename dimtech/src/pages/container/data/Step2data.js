@@ -1,7 +1,6 @@
 export const Step2Month = [
   { month: "Month", },
   { month: "January", },
-  { month: "Month", },
   { month: "February", },
   { month: "March", },
   { month: "April", },
@@ -416,6 +415,10 @@ export const Step2Countries = [
 ]
 
 export const Step2Ind = [
+  {
+    "code": "Ind",
+    "name": ""
+  },
   {
     "code": "+7 840",
     "name": "Abkhazia"
