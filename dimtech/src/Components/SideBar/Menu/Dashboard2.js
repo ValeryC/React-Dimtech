@@ -49,7 +49,7 @@ export default function Dashboard2() {
             "nouvellesHospitalisations": 1737,
             "nouvellesReanimations": 244, */}
           {/* i think this is not the right keyword*/}
-          <div className="block-dash" key={data}>{data.deces}
+          <div className="block-dash" key={data}>{data.map}
             Type
             <ul>
 
