@@ -36,6 +36,19 @@ export default function Dashboard2() {
       <div className="Container-dashboard">
         <DashboardBlock />
         <div className="Container-dashelement2">
+          {/* VALUE CANNOT DISPLAY  */}
+          {/* I want to display this data separately */}
+          {/* "sourceType": "ministere-sante",
+            "casConfirmes": 2680239,
+            "deces": 45980,
+            "decesEhpad": 20302,
+            "hospitalises": 24904,
+            "reanimation": 2625,
+            "gueris": 197503,
+            "casConfirmesEhpad": 149671,
+            "nouvellesHospitalisations": 1737,
+            "nouvellesReanimations": 244, */}
+          {/* i think this is not the right keyword*/}
           <div className="block-dash" key={data}>{data.deces}
             Type
             <ul>
