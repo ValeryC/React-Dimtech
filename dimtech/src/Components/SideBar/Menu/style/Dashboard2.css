@@ -34,6 +34,10 @@
   /* Firefox */
 }
 
+.block-dash li a {
+  color: red
+}
+
 .block-dash::-webkit-scrollbar {
   display: none;
 }
