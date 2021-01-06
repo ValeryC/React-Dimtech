@@ -1,0 +1,69 @@
+.Container-dashboard {
+  width: 100%;
+  height: 100vh;
+  background: #F4F4F4;
+}
+
+.Container-dashelement2 {
+  background: #F4F4F4;
+  width: 98%;
+  max-height: 93vh;
+  height: 94%;
+  padding: auto;
+  margin: auto;
+  display: flex;
+  border-radius: 16px;
+}
+
+.block-dash {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: auto;
+  width: 535px;
+  background: white;
+  overflow-y: scroll;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.block-dash::-webkit-scrollbar {
+  display: none;
+}
+
+.block-line {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  height: 437px;
+}
+
+.container-block-line {
+  width: 1070px;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-content: space-between;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.arrow-block {
+  display: flex;
+  justify-content: space-between;
+}

@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom'
 
 export default function Step1() {
 
+  const [emailInput, setEmailInput] = useState('')
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -15,9 +16,21 @@ export default function Step1() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
+  function validEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(email)
+  }
+
+  function handleMailChange(e) {
+    setEmailInput(e.target.value)
+  }
+
   async function handleSubmit(e) {
     e.preventDefault()
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+    if (!validEmail(emailInput)) {
+      return setError('The email address is badly formatted.')
+    }
+    else if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError('Passwords do not match')
     }
     else if (passwordRef.current.value.length < 6) {
@@ -40,12 +53,38 @@ export default function Step1() {
       <div className='Form-login-container2'>
         {error && <div className="error">{error}</div>}
         <form className="Form-login1" onSubmit={handleSubmit}>
-          <input className='Form-input-login2' id="email" type="email" placeholder="E-mail" ref={emailRef} required />
-          <input className='Form-input-login2' id="password" type="password" placeholder="Password" ref={passwordRef} required />
-          <input className='Form-input-login2' id="password-confirm" type="password" placeholder="Confirm Password" ref={passwordConfirmRef} required />
+
+          <input
+            className='Form-input-login2'
+            id="email"
+            type="email"
+            placeholder="E-mail"
+            ref={emailRef}
+            value={emailInput}
+            onChange={handleMailChange}
+            required />
+
+          <input
+            className='Form-input-login2'
+            id="password"
+            type="password"
+            placeholder="Password"
+            ref={passwordRef}
+            required />
+
+          <input className='Form-input-login2'
+            id="password-confirm" type="password"
+            placeholder="Confirm Password"
+            ref={passwordConfirmRef}
+            required />
           {/* this checkbox should probably erase */}
           <div className="Login-element">
-            <input className="styled-checkbox" id="styled-checkbox" type="checkbox" value="log" />
+            <input
+              className="styled-checkbox"
+              id="styled-checkbox"
+              type="checkbox"
+              value="log" />
+
             <label className="CheckboxLabel2">Keep me logged</label>
           </div>
           <div className="Button">

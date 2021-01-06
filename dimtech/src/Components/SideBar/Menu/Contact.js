@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { db } from '../../../firebase'
 import Sidebar from '../Sidebar'
 import './style/Contact.css'
@@ -10,6 +10,11 @@ const Contact = () => {
   const [object, setObject] = useState("")
   const [message, setMessage] = useState("")
   const [loader, setLoader] = useState(false)
+
+
+  useEffect(() => {
+    document.title = 'Contact'
+  })
 
   function validEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
