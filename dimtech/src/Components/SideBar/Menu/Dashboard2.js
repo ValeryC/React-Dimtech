@@ -7,14 +7,7 @@ import ArrowRight from '../../ArrowRight'
 import axios from 'axios'
 
 export default function Dashboard2() {
-
-  // useEffect(() => {
-  // })
-
-
-  // const url = "https://coronavirusapi-france.now.sh/FranceLiveGlobalData"
-
-  const [data, setData] = useState({ hits: [] });
+  const [data, setData] = useState();
 
   useEffect(() => {
     document.title = 'Dashboard2'
@@ -24,6 +17,10 @@ export default function Dashboard2() {
       );
       console.log(result.data)
       setData(result.data);
+
+      // console.log(data.FranceGlobalLiveData.slice(0, 1))
+
+
     };
 
     fetchData();
@@ -36,30 +33,78 @@ export default function Dashboard2() {
       <div className="Container-dashboard">
         <DashboardBlock />
         <div className="Container-dashelement2">
-          {/* VALUE CANNOT DISPLAY  */}
-          {/* I want to display this data separately */}
-          {/* "sourceType": "ministere-sante",
-            "casConfirmes": 2680239,
-            "deces": 45980,
-            "decesEhpad": 20302,
-            "hospitalises": 24904,
-            "reanimation": 2625,
-            "gueris": 197503,
-            "casConfirmesEhpad": 149671,
-            "nouvellesHospitalisations": 1737,
-            "nouvellesReanimations": 244, */}
-          {/* i think this is not the right keyword*/}
-          <div className="block-dash" key={data}>{data.map}
-            Type
-            <ul>
 
-            </ul>
+          <div className="block-element-dash2" key={data}>
+            <div className='Main-title'>Info Covid en France</div>
+            <div className="source">
+              Source :
+            {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.source.nom + ', ' + elem.date))}
+            </div>
+            <div className="bloc-item-element">
+              <div className="Item-title">Décès</div>
+              <div className='data' >
+                {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.deces))}
+              </div>
+            </div>
+
+            <div className="bloc-item-element">
+              <div className="Item-title">Cas Confirmés</div>
+              <div className='data' >
+                {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.casConfirmes))}
+              </div>
+            </div>
+
+            <div className="bloc-item">
+              <div className="bloc-item-element">
+                <div className="Item-title">Hospitalisés</div>
+                <div className='data' >
+                  {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.hospitalises))}
+                </div>
+              </div>
+
+              <div className="bloc-item-element">
+
+                <div className="Item-title">Nouvelles Hospitalisations </div>
+                <div className='data' >
+                  {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.nouvellesHospitalisations))}
+                </div>
+              </div>
+            </div>
+
+            <div className="bloc-item">
+              <div className="bloc-item-element">
+                <div className="Item-title">Réanimation</div>
+                <div className='data' >
+                  {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.reanimation))}
+                </div>
+              </div>
+
+              <div className="bloc-item-element">
+
+                <div className="Item-title">Nouvelles Réanimations </div>
+                <div className='data' >
+                  {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.nouvellesReanimations))}
+                </div>
+              </div>
+            </div>
+
+
+            <div className="bloc-item-element">
+              <div className="Item-title">Guéris</div>
+              <div className='data' >
+                {data && data.FranceGlobalLiveData.slice(0, 1).map((elem) => JSON.stringify(elem.gueris))}
+              </div>
+            </div>
+
           </div>
-          <div className="block-dash" style={{ backgroundColor: '#707070', color: 'white' }}>
-            of
+
+
+          <div className="block-element-dash2">
+
+
           </div>
-          <div className="block-dash">
-            dashboard
+          <div className="block-element-dash2">
+
           </div>
 
         </div>

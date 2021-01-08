@@ -6,19 +6,18 @@
 
 .Container-dashelement {
   background: #F4F4F4;
-  width: 96%;
   max-height: 93vh;
   height: 94%;
-  padding: auto;
-  margin: auto;
-  display: flex;
   border-radius: 16px;
+  display: flex;
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
 .Search-movie {
   border-radius: 20px;
   height: auto;
-  width: 1000px;
+  width: 1190px;
   background: white;
   overflow-x: hidden;
   overflow-y: scroll;

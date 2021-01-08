@@ -7,7 +7,7 @@ import { useAuth } from '../../contexts/AuthContext'
 
 //This file contains 3 components. Sent, Email , ForgottenPass(main) 
 
-const Sent = ({ user }) => {
+const Sent = () => {
   const { currentUser } = useAuth()
   return (
     <div className="Instruction">
@@ -94,6 +94,7 @@ class ForgottenPass extends React.Component {
     let email = this.refs.email.value
     this.props.onSignIn(email)
   }
+
   render() {
     return (
       <div className="Form">
@@ -103,7 +104,7 @@ class ForgottenPass extends React.Component {
         {
           (this.state.user) ?
             //rendering component Sent first cause user === null
-            <Sent user={this.state.user} />
+            <Sent />
             :
             //rendering component Email first cause user != null 
             <Email onSignIn={this.valid.bind(this)} />
