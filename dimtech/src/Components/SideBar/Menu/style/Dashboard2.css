@@ -23,7 +23,7 @@
   margin-right: 15px;
   border-radius: 20px;
   height: auto;
-  width: 525px;
+  width: 33.3%;
   border-radius: 16px;
   background: white;
   overflow-y: scroll;
@@ -32,6 +32,9 @@
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+.fade-in {
   -webkit-animation: fade-in 15s linear 1s infinite both;
   animation: fade-in 15s linear 1s infinite both;
 }

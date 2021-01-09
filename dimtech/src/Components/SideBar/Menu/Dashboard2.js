@@ -34,7 +34,7 @@ export default function Dashboard2() {
         <DashboardBlock />
         <div className="Container-dashelement2">
 
-          <div className="block-element-dash2" key={data}>
+          <div className="block-element-dash2  fade-in" key={data}>
             <div className='Main-title'>Info Covid en France</div>
             <div className="source">
               Source :
