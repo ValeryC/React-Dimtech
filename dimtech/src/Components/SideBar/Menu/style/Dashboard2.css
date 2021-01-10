@@ -111,6 +111,25 @@
   padding-bottom: 50px;
 }
 
+.title-dash2 {
+  text-align: center;
+}
+
+.text-d2 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.explanation {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 14px;
+}
+
+.comparaison {
+  font-size: 12px;
+}
+
 .arrow-block {
   display: flex;
   justify-content: space-between;
