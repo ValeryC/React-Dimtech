@@ -115,7 +115,7 @@ export default function Dashboard2() {
             <h1 className="title-dash2">Choix</h1>
             <div className="explanation">
               Redux => 4millions de telechargement, 163kb leger, 19fichier, complexe<br />
-              Mobix => 468000 telechargement, 3,47mo, 118fichier, plus simple à apprendre<br />
+              Mobix => 468000 telechargement, 3,47mo, 118fichiers, plus simple à apprendre<br />
               Tout depend du projet, dans ce projet peu nécéssaire d'utiliser un state management. Car mon projet n'est pas
               d'une grande complexité, mais nécessitera surment un gestionnaire d'état lorsqu'il faudra passé des données à d'autres composants
               et gerer l'état de mes composants. Pour le moment, j'utilise un context qui me permet de transmettre l'état mes données
