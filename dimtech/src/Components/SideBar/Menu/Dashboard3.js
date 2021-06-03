@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import DashboardBlock from './DashboardComp/DashboardBlock'
 import "./style/Dashboard3.css"
+import DashR from '../../Dashboard/dashReseau'
 import ArrowLeft from '../../ArrowLeft'
 import ArrowRight from '../../ArrowRight'
 
@@ -13,22 +14,35 @@ export default function Dashboard3() {
 
   return (
     <div className="Main-container">
-      {/* <Sidebar /> */}
+
       <div className="Container-dashboard">
         <DashboardBlock />
-        <div className="Container-dashelement2">
-          <div className="block-dash">
-            Type
+        <div className="Container-dashelement3">
+
+          <div className="block-element-dash3">
+            <DashR />
           </div>
 
-          <div className="container-block-line">
-            <div className="block-line">
-              of
+          <div className="block-element-dash3">
+            <h1 className="title-dash2">Pourquoi une gestion d'état?</h1>
+            <div className="explanation"></div>
+            <h1 className="title-dash2"></h1>
+            <div className="explanation">
+            </div>
+
           </div>
-            <div className="block-line">
-              dashboard
+
+          <div className="block-element-dash3">
+            <h1 className="title-dash2">Mobx</h1>
+            <div className="text-d2">
+            </div>
+            <h1 className="title-dash2">Redux</h1>
+            <div className="text-d2">
+
+            </div>
+
           </div>
-          </div>
+
         </div>
         <div className="arrow-block">
           <div className="arrowLeft">
